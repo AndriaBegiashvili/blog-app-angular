@@ -1,7 +1,10 @@
 <div class="post" *ngFor="let blog of blogs">
+  <a [routerLink]="['/blog', blog.id]" ><div>
     <h3>{{ blog.author }}</h3>
       <p>{{blog.blogText}}</p>
     <p>{{blog.publishDate}}</p>
+  </div>
+</a>
     <hr>
   </div>
 

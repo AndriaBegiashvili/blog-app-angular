@@ -10,12 +10,16 @@ import { Router } from '@angular/router';
 })
 export class BlogListComponent implements OnInit {
 
-  blogs:{ blogText: string, author: string, publishDate: string }[] = [];
+  blogs:{id:number, blogText: string, author: string, publishDate: string }[] = [];
 
   constructor(private blogService: BlogService, private router:Router) { }
 
   ngOnInit(): void {
     this.blogs = this.blogService.getBlogs();
+  }
+
+  viewBlog(blogId: number): void {
+    this.router.navigate(['/blog', blogId]);
   }
 
 

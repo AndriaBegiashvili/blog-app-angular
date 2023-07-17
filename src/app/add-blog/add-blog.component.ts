@@ -18,6 +18,7 @@ export class AddBlogComponent implements OnInit{
   monthNames:string[] = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
+
   month:string = this.monthNames[this.currentMonth]
 
   constructor(private blogService:BlogService,private router: Router){}
@@ -26,8 +27,8 @@ export class AddBlogComponent implements OnInit{
   }
 
   addBlog(): void{
-
     const blog = {
+      id: this.generateUniqueId(),
       blogText: this.blogText,
       author: this.blogAuthor,
       publishDate: this.month+" "+this.currentMonth+", "+this.currentHour+":"+this.currentMinute
@@ -35,6 +36,12 @@ export class AddBlogComponent implements OnInit{
     this.blogService.addBlog(blog);
     this.router.navigate(['/']);
 
+  }
+  private generateUniqueId(): number {
+    return Math.floor(Math.random() * 1000) + 1;
+  }
+  cancelBlog():void{
+    this.router.navigate(['/'])
   }
 
 }
