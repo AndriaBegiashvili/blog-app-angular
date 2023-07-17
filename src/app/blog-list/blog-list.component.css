@@ -1,0 +1,11 @@
+.post{
+  width: 60%;
+  margin: 0 auto;
+}
+.post h3{
+  word-wrap: break-word;
+}
+.post p{
+  word-wrap: break-word;
+}
+

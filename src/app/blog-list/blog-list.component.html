@@ -1,9 +1,7 @@
-
-<h2>Blog List</h2>
-<ul>
-  <li *ngFor="let blog of blogs">
-    <h3>Author: {{ blog.author }}</h3>
-    <p>{{blog.blogText}}</p>
+<div class="post" *ngFor="let blog of blogs">
+    <h3>{{ blog.author }}</h3>
+      <p>{{blog.blogText}}</p>
     <p>{{blog.publishDate}}</p>
-  </li>
-</ul>
+    <hr>
+  </div>
+

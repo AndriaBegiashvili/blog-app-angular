@@ -1,0 +1,35 @@
+.post{
+  width: 60%;
+  margin: 0 auto;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.author{
+  width: 400px;
+  height: 30px;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 5px;
+}
+.area{
+  width: 600px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 5px;
+  font-size: 14px;
+}
+.btn{
+  border: 2px solid black;
+  width: 100px;
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+}
