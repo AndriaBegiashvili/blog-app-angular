@@ -1,0 +1,34 @@
+
+.main{
+  width: 100%;
+  background-color: rgb(213, 223, 231);
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+.header p{
+  font-size: 40px;
+  cursor: pointer;
+}
+.header a{
+  text-decoration: none;
+  color: black;
+}
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  border: 2px solid black;
+  width: 100px;
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+}
