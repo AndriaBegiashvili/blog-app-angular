@@ -1,11 +1,14 @@
 <div class="post">
-<h2>Add Blog</h2>
+
 <div class="inputs">
-<div>
-  <input class="author" [(ngModel)]="blogAuthor" placeholder="Enter the author name">
+  <h2>Add Blog</h2>
+<div class="input-err">
+  <input required class="author" [(ngModel)]="blogAuthor" placeholder="Enter the author name">
+  <span class="error" *ngIf="showErrors && blogAuthor.trim() === ''">Please enter the author.</span>
 </div>
-<div>
-  <textarea class="area" [(ngModel)]="blogText" placeholder="Enter the blog title" ></textarea>
+<div class="input-err">
+  <textarea required class="area" [(ngModel)]="blogText" placeholder="Enter the blog title" ></textarea>
+  <span *ngIf="showErrors && blogText.trim() === ''">Please enter blog text.</span>
 </div>
 <div class="bttns">
   <button class="btn" (click)="addBlog()">Add</button>

@@ -1,1 +1,13 @@
-<h1 *ngFor="let i of blog">{{i.author}}</h1>
+<div class="blog">
+  <div class="name">
+    <h2>Blog id: {{blog.id}}</h2>
+  </div>
+  <div>
+    <h3>Author: {{blog.author}}</h3>
+    <p>{{blog.blogText}}</p>
+  </div>
+  <div class="text-footer">
+    <p>{{blog.publishDate}}</p>
+  </div>
+
+</div>

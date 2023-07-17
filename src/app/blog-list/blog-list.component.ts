@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { BlogService } from '../services/blog.service';
 import { Router } from '@angular/router';
+import { Blog } from '../models/blog.model';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class BlogListComponent implements OnInit {
 
-  blogs:{id:number, blogText: string, author: string, publishDate: string }[] = [];
+  blogs:Blog[] = [];
 
   constructor(private blogService: BlogService, private router:Router) { }
 
