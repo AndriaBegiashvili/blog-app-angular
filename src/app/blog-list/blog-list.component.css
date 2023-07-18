@@ -8,4 +8,7 @@
 .post p{
   word-wrap: break-word;
 }
+span{
+  font-size: 12px;
+}
 

@@ -13,6 +13,7 @@ Blog
 export class AddBlogComponent implements OnInit{
   blogText: string = '';
   blogAuthor: string = '';
+  blogTitle:string = '';
 
   showErrors: boolean = false;
   errors: { [key: string]: string } = {};
@@ -36,9 +37,14 @@ export class AddBlogComponent implements OnInit{
       this.errors['blogText'] = 'Please enter the blog text.';
       return;
     }
+    if (this.blogAuthor.trim() === '') {
+      this.errors['blogTitle']= 'Please enter the title.';
+      return;
+    }
     const blog: Blog = new Blog();
     blog.id = this.generateUniqueId();
     blog.blogText = this.blogText;
+    blog.blogTitle = this.blogTitle;
     blog.author = this.blogAuthor;
     blog.publishDate = this.getCurrentTime();
     this.blogService.addBlog(blog);

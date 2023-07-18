@@ -7,6 +7,10 @@
   <span class="error" *ngIf="showErrors && blogAuthor.trim() === ''">Please enter the author.</span>
 </div>
 <div class="input-err">
+  <input required class="author" [(ngModel)]="blogTitle" placeholder="Enter the blog title" >
+  <span *ngIf="showErrors && blogTitle.trim() === ''">Please enter the title.</span>
+</div>
+<div class="input-err">
   <textarea required class="area" [(ngModel)]="blogText" placeholder="Enter the blog title" ></textarea>
   <span *ngIf="showErrors && blogText.trim() === ''">Please enter blog text.</span>
 </div>

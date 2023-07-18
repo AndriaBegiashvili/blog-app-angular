@@ -1,6 +1,6 @@
 <div class="post" *ngFor="let blog of blogs">
   <a [routerLink]="['/blog', blog.id]" ><div>
-    <h3>{{ blog.author }}</h3>
+    <h3>{{ blog.blogTitle }}, <span> written by {{blog.author}}</span></h3>
       <p>{{blog.blogText}}</p>
     <p>{{blog.publishDate}}</p>
   </div>
