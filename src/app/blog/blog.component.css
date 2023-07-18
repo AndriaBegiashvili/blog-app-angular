@@ -17,14 +17,32 @@ h3{
 }
 .text-footer p{
   font-weight: bold;
-  display: flex;
   font-size: 12px;
-  flex-direction: row;
   gap: 1px;
   word-wrap: break-word;
 
 }
+.text-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 span{
   font-size: 12px;
   font-weight: bold;
+}
+.back{
+  border: 2px solid black;
+  width: 100px;
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.back:hover{
+  background-color: black;
+  color: white;
+  transition: 0.5s;
 }

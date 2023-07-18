@@ -8,7 +8,13 @@
     <p>{{blog.blogText}}</p>
   </div>
   <div class="text-footer">
-    <p>{{blog.publishDate}}</p>
+    <div>
+      <p>{{blog.publishDate}}</p>
+    </div>
+    <div>
+      <button (click)="goToHome()" class="back"> go back</button>
+    </div>
+
   </div>
 
 </div>

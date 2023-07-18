@@ -38,6 +38,11 @@
   border-radius: 6px;
   cursor: pointer;
 }
+.btn:hover{
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
 .btn-cancel{
   border: 2px solid rgb(255, 0, 0);
   width: 100px;
@@ -47,6 +52,11 @@
   font-family: 'Montserrat', sans-serif;
   border-radius: 6px;
   cursor: pointer;
+}
+.btn-cancel:hover{
+  background-color: red;
+  color: white;
+  transition: 0.5s;
 }
 .bttns{
   display: flex;

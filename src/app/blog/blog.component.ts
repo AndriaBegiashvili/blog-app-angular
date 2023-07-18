@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BlogService } from '../services/blog.service';
 BlogService
 @Component({
@@ -12,7 +12,8 @@ export class BlogComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private blogService: BlogService
+    private blogService: BlogService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -20,5 +21,8 @@ export class BlogComponent implements OnInit {
       const id = params['id'];
       this.blog = this.blogService.getBlogById(id);
     });
+  }
+  goToHome(): void{
+    this.router.navigate(['/']);
   }
 }
