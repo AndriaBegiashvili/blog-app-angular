@@ -37,7 +37,7 @@ export class AddBlogComponent implements OnInit{
       this.errors['blogText'] = 'Please enter the blog text.';
       return;
     }
-    if (this.blogAuthor.trim() === '') {
+    if (this.blogTitle.trim() === '') {
       this.errors['blogTitle']= 'Please enter the title.';
       return;
     }
